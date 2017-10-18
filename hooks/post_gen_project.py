@@ -12,7 +12,10 @@ except ImportError:
     VIRTUALENV_AVAILABLE = False
 
 
-if VIRTUALENV_AVAILABLE:
+create_virtualenv = True if '{{ cookiecutter.create_virtualenv }}' == 'Yes' else False
+
+
+if VIRTUALENV_AVAILABLE and create_virtualenv:
     try:
         venv.create('env', with_pip=True)
         proc = subprocess.Popen(

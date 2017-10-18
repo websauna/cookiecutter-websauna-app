@@ -30,6 +30,7 @@ def context():
         'release_date': 'today',
         'year': '2017',
         'version': '1.0.0a1',
+        'create_virtualenv': 'No',
         'authentication_random': '6c613c8193060d3738ca90103a6c79878150220b',
         'authomatic_random': 'dc999820aa1e1b71b166039f7f3cc8cee61567e0',
         'session_random': '42a8a98f766b8eba77a6326a579ecdf6d22b14b7',
@@ -78,6 +79,12 @@ def test_generation(cookies, context):
     paths = build_files_list(str(result.project))
     assert paths
     check_paths(paths)
+
+
+def test_code_qa(cookies, context):
+    """Generated project should pass flake8 and py.test."""
+    context['create_virtualenv'] = 'Yes'
+    result = cookies.bake(extra_context=context)
     base_path = str(result.project)
     # Run Flake 8
     try:

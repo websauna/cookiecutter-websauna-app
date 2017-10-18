@@ -68,6 +68,10 @@ Answer the prompts with your own desired options. For example:
         release_date [today]:
         year [2017]:
         version [1.0.0a1]:
+        Select create_virtualenv:
+        1 - True
+        2 - False
+        Choose from 1, 2 [1]: 1
         authentication_random [82e7affc6b55e58dd962e74e37dedc19679c92b9]:
         authomatic_random [22539423a5ceb1fe6f7c6cd1a3a1867315236f25]:
         session_random [1261a92aa68dc52877d8d2606943a4fb69ca0879]:
