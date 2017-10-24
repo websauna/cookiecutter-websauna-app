@@ -61,7 +61,7 @@ def check_paths(paths):
 def test_invalid_namespace(cookies, context):
     """Pre_gen_project hook will fail if namespace is invalid."""
     context['repo_name'] = 'websauna.application'
-    context['package_name'] = 'application'
+    context['namespace'] = 'websauna'
     result = cookies.bake(extra_context=context)
     assert result.exit_code != 0
     assert result.exception is not None
