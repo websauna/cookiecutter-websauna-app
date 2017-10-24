@@ -12,7 +12,6 @@ with open(os.path.join(here, 'CHANGES.rst')) as f:
 
 requires = [
     'cookiecutter',
-    'websauna.j2secret',
 ]
 
 dev_requirements = [
