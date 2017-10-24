@@ -62,9 +62,9 @@ Answer the prompts with your own desired options. For example:
         project_name [My Package]: My Application
         project_short_description [A nice and short description.]: Another Websauna application
         tags [python package websauna pyramid]: python package websauna pyramid
-        repo_name [websauna.package]: company.application
-        namespace [company]: company
-        package_name [application]: application
+        repo_name [my.app]: company.application
+        namespace [my]: company
+        package_name [app]: application
         release_date [today]:
         year [2017]:
         version [1.0.0a1]:
@@ -87,8 +87,16 @@ After a while, the generation will be finished and the following message will be
 
         ===============================================================================
         Websauna Application.
-        Package company.application was generated.
+        Package my.app was generated.
         Now, code it, create a git repository, push to your Github account.
+        To deploy this Websauna package with Ansible, use the following variables
+
+            - package_name: my.app
+            - package_path: my/app
+
+        Read more about Websauna deployment:
+          https://websauna.org/docs/tutorials/deployment/index.html
+
         Sorry for the convenience.
         ===============================================================================
 

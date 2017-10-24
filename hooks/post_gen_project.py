@@ -35,6 +35,14 @@ msg = dedent("""
     Websauna Application.
     Package {{ cookiecutter.repo_name }} was generated.
     Now, code it, create a git repository, push to your Github account.
+    To deploy this Websauna package with Ansible, use the following variables
+
+        - package_name: {{ cookiecutter.repo_name }}
+        - package_path: {{ cookiecutter.namespace }}/{{ cookiecutter.package_name }}
+
+    Read more about Websauna deployment:
+      https://websauna.org/docs/tutorials/deployment/index.html
+
     Sorry for the convenience.
     ===============================================================================
 """)

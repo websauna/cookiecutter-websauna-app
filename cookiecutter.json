@@ -6,7 +6,7 @@
     "project_name": "My Application",
     "project_short_description": "Another Websauna application.",
     "tags": "python package websauna pyramid",
-    "repo_name": "websauna.application",
+    "repo_name": "my.app",
     "namespace": "{{ cookiecutter.repo_name.split('.')[0] }}",
     "package_name": "{{ cookiecutter.repo_name.split('.')[1] }}",
     "release_date": "today",
