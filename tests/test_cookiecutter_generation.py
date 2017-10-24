@@ -24,8 +24,8 @@ def context():
         'project_name': 'Websauna: News portal',
         'project_short_description': 'Websauna news portal application.',
         'tags': 'python package websauna pyramid',
-        'repo_name': 'websauna.application',
-        'namespace': 'websauna',
+        'repo_name': 'my.application',
+        'namespace': 'my',
         'package_name': 'application',
         'release_date': 'today',
         'year': '2017',
@@ -61,7 +61,7 @@ def check_paths(paths):
 def test_invalid_namespace(cookies, context):
     """Pre_gen_project hook will fail if namespace is invalid."""
     context['repo_name'] = 'websauna.application'
-    context['package_name'] = 'site'
+    context['package_name'] = 'application'
     result = cookies.bake(extra_context=context)
     assert result.exit_code != 0
     assert result.exception is not None
