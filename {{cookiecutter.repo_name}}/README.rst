@@ -43,6 +43,8 @@ Sync models from this application to the newly created database:
 
     .. code-block:: shell
 
+        ws-alembic -c {{ cookiecutter.namespace }}/{{ cookiecutter.package_name }}/conf/development.ini -x packages=all revision --auto -m "Initial migration"
+        ws-alembic -c {{ cookiecutter.namespace }}/{{ cookiecutter.package_name }}/conf/development.ini -x packages=all upgrade head
         ws-sync-db {{ cookiecutter.namespace }}/{{ cookiecutter.package_name }}/conf/development.ini
 
 
