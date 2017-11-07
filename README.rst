@@ -81,7 +81,7 @@ After a while, the generation will be finished and the following message will be
         ===============================================================================
         Websauna Application.
         Package my.app was generated.
-        Now, code it, create a git repository, push to your Github account.
+        Now, code it, create a git repository, push to your GitHub account.
         To deploy this Websauna package with Ansible, use the following variables
 
             - package_name: my.app
@@ -99,7 +99,7 @@ Next Steps
 
 * Code the package
 * Create a git repository
-* Push to Github (or any other platform)
+* Push to GitHub (or any other platform)
 
 
 .. _`Websauna`: https://websauna.org

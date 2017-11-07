@@ -45,21 +45,21 @@ Sync models from this application to the newly created database:
 
         ws-alembic -c {{ cookiecutter.namespace }}/{{ cookiecutter.package_name }}/conf/development.ini -x packages=all revision --auto -m "Initial migration"
         ws-alembic -c {{ cookiecutter.namespace }}/{{ cookiecutter.package_name }}/conf/development.ini -x packages=all upgrade head
-        ws-sync-db {{ cookiecutter.namespace }}/{{ cookiecutter.package_name }}/conf/development.ini
+        ws-sync-db ws://{{ cookiecutter.namespace }}/{{ cookiecutter.package_name }}/conf/development.ini
 
 
 Add a user with administrative rights:
 
     .. code-block:: shell
 
-        ws-create-user {{ cookiecutter.namespace }}/{{ cookiecutter.package_name }}/conf/development.ini admin@example.com mypassword
+        ws-create-user ws://{{ cookiecutter.namespace }}/{{ cookiecutter.package_name }}/conf/development.ini admin@example.com mypassword
 
 
 Start the application:
 
     .. code-block:: shell
 
-        ws-pserve {{ cookiecutter.namespace }}/{{ cookiecutter.package_name }}/conf/development.ini
+        ws-pserve ws://{{ cookiecutter.namespace }}/{{ cookiecutter.package_name }}/conf/development.ini
 
 
 Running the test suite
