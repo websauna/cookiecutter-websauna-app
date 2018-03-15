@@ -1,2 +1,2 @@
-websauna[dev,celery,utils,notebook]==1.0a5
+-e "git+https://github.com/websauna/websauna.git@feat/split-packages#egg=websauna[dev,celery,utils,notebook]"
 -e ".[dev,test]"
