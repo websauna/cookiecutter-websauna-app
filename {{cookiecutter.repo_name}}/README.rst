@@ -3,7 +3,7 @@
 
 {{ cookiecutter.repo_name }} is a `Websauna <https://websauna.org>`_ application package for {{ cookiecutter.project_name}}.
 
-To run this package you need Python 3.4+, PostgresSQL and Redis.
+To run this package you need Python 3.5.2+, PostgresSQL and Redis.
 
 
 Installation
