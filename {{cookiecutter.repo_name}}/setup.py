@@ -23,7 +23,7 @@ if len(sys.argv) >= 2:
 
 requires = [
     'prettyconf',
-    'websauna',
+    'websauna[celery,utils,notebook]',
 ]
 
 dev_requirements = [
@@ -51,6 +51,7 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: WSGI :: Application',
     ],
@@ -59,6 +60,7 @@ setup(
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
     keywords='{{ cookiecutter.tags }}',
     packages=find_packages(),
+    python_requires='>=3.5.2',
     namespace_packages=['{{ cookiecutter.namespace }}', ],
     include_package_data=True,
     zip_safe=False,

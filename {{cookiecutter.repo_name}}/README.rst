@@ -19,7 +19,7 @@ Example:
         python3 -m venv env  # Create virtual environment
         source env/bin/activate  # Activate virtual environment
         pip install -U pip  # Make sure pip itself is up-to-date
-        pip install -e .  # Install this package
+        pip install -r requirements.txt  # Install this package
 
 
 Running the website
