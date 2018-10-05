@@ -4,9 +4,9 @@ import transaction
 from sqlalchemy.orm.session import Session
 from splinter.driver import DriverAPI
 
-from websauna.tests.utils import create_user
-from websauna.tests.utils import EMAIL
-from websauna.tests.utils import PASSWORD
+from websauna.tests.test_utils import create_user
+from websauna.tests.test_utils import EMAIL
+from websauna.tests.test_utils import PASSWORD
 from websauna.system import Initializer
 
 
