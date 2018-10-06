@@ -1,5 +1,4 @@
 """{{ cookiecutter.project_name }} entry point and configuration."""
-
 import websauna.system
 
 
@@ -39,13 +38,18 @@ class Initializer(websauna.system.Initializer):
 
     def configure_model_admins(self):
         """Register the models of this application."""
-
         # Call parent which registers user and group admins
         super(Initializer, self).configure_model_admins()
 
         # Scan our admins
         from . import admins
         self.config.scan(admins)
+
+    def include_addons(self):
+        """Include a Websauna add on."""
+        # i.e: To include websauna.newsletter, simply uncomment the following line.
+        # self.config.include('websauna.newsletter')
+        pass
 
     def run(self):
         super(Initializer, self).run()
