@@ -9,7 +9,7 @@ import subprocess
 import sys
 
 
-CC_PATTERN = '{{(\s?cookiecutter)[.](.*?)}}'
+CC_PATTERN = r'{{(\s?cookiecutter)[.](.*?)}}'
 RE_CC = re.compile(CC_PATTERN)
 
 SECRET_PATTERN = r'%(cookiecutter)[.](.*?)random%'
