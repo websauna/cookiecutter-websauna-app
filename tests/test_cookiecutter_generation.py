@@ -102,11 +102,10 @@ def test_code_qa(cookies, context):
     base_path = str(result.project)
     # Run Flake 8
     try:
-        sh.flake8('{path}/setup.py {path}/{namespace}'.format(
-                path=base_path,
-                namespace=context['namespace']
-            )
-        )
+        sh.flake8.bake('{path}/setup.py {path}/{namespace}'.format(
+            path=base_path,
+            namespace=context['namespace']
+        ))
     except sh.ErrorReturnCode as e:
         pytest.fail(e)
     # Run tests
